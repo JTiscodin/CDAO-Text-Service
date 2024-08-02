@@ -17,7 +17,7 @@ const App = () => {
   const [contract, setContract] = useState(null);
   const [userRegistered, setUserRegistered] = useState(false);
   const [userName, setUserName] = useState("");
-  const [currentPage, setCurrentPage] = useState(1); // To manage page navigation
+  const [currentPage, setCurrentPage] = useState(0); // To manage page navigation
   const [tagName, setTagName] = useState("");
   const [questionContent, setQuestionContent] = useState("");
   const [searchTag, setSearchTag] = useState("");
@@ -119,7 +119,7 @@ const App = () => {
   const removeaTag = async () => {
     if (contract && removeTag) {
       try {
-        const tx = await contract.removeaTag(removeTag);
+        const tx = await contract.removeTag(removeTag);
         await tx.wait();
         console.log("Tag removed successfully");
       } catch (error) {
