@@ -300,7 +300,7 @@ const App = () => {
           <CardTitle>Add a Tag</CardTitle>
         </CardHeader>
         <Input
-        className="max-w-[16vw]"
+          className="max-w-[16vw]"
           type="text"
           placeholder="Tag Name"
           value={newTag}
@@ -373,7 +373,9 @@ const App = () => {
 
   return (
     <div className="h-screen w-screen flex flex-col justify-evenly items-center">
-      <h1 className="text-8xl font-bold">AskAround DApp</h1>
+      <div>
+        <img className="w-auto h-[50vh] " src="/logo.png" />
+      </div>
       {currentPage === 0 && renderRegisterPage()}
       {currentPage === 1 && renderForumPage()}
       {currentPage === 3 && renderQuestionPage()}
